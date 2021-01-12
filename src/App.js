@@ -1,12 +1,16 @@
-import React from 'react'
+import React from "react";
 
-import NavBar from './Components/navBar'
+import NavBar from "./Components/navBar";
+import Home from "./views/home";
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <div className="Container">
         <NavBar />
-    </div>
+        <Home />
+      </div>
+    </>
   );
 }
 
