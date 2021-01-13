@@ -1,14 +1,14 @@
 import React from "react";
 
 import NavBar from "./Components/navBar";
-import Home from "./views/home";
+import Routes from './Routes'
 
 function App() {
   return (
     <>
       <div className="Container">
         <NavBar />
-        <Home />
+        <Routes />
       </div>
     </>
   );
