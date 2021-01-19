@@ -9,7 +9,8 @@ const estadoInicial = {
     descricao:'',
     preco: 0,
     fornecedor:'',
-    sucesso: false
+    sucesso: false,
+    errors: []
 }
 
 class CadastroProdutos extends Component {
@@ -36,9 +37,15 @@ class CadastroProdutos extends Component {
           preco: this.state.preco,
           fornecedor:this.state.fornecedor
         }
-        this.service.salvar(produto)
-        this.limpaCampo()
-        this.setState({ sucesso: true})  
+        try {
+          this.service.salvar(produto)
+          this.limpaCampo()
+          this.setState({ sucesso: true})  
+        } catch (error) {
+          
+        }
+
+       
       
     }
 
